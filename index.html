@@ -1,149 +1,481 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Ты пришла в этот мир не случайно — 19 сентября, Гродно</title>
-<style>
-  * { margin:0; padding:0; box-sizing:border-box; }
-  body { font-family:Georgia,serif; color:#3d2c2c; background:#faf3eb; line-height:1.6; }
-  .hero { background:linear-gradient(135deg,#f7e1d7,#fdf0e0); padding:70px 20px; text-align:center; }
-  .hero h1 { font-size:2.3em; color:#8b4a3c; margin-bottom:15px; font-weight:normal; letter-spacing:1px; }
-  .hero .sub { font-size:1.15em; color:#6b4a3c; margin-bottom:25px; }
-  .hero .date { display:inline-block; background:#fff; padding:10px 22px; border-radius:30px; margin-bottom:25px; box-shadow:0 2px 10px rgba(0,0,0,.05); }
-  .btn { display:inline-block; background:#c4704a; color:#fff; padding:15px 40px; border-radius:30px; text-decoration:none; font-size:1.1em; transition:.3s; margin:5px; }
-  .btn:hover { background:#a85a38; transform:translateY(-2px); }
-  .btn-ghost { display:inline-block; background:transparent; color:#8b4a3c; border:2px solid #c4704a; padding:13px 38px; border-radius:30px; text-decoration:none; font-size:1.1em; transition:.3s; margin:5px; }
-  .btn-ghost:hover { background:#c4704a; color:#fff; }
-  section { max-width:800px; margin:0 auto; padding:55px 20px; }
-  h2 { color:#8b4a3c; font-size:1.7em; margin-bottom:28px; text-align:center; font-weight:normal; }
-  .for-whom ul { list-style:none; }
-  .for-whom li { background:#fff; padding:18px; margin-bottom:12px; border-radius:12px; border-left:4px solid #c4704a; box-shadow:0 2px 8px rgba(0,0,0,.04); }
-  .waits { background:#fff7ef; }
-  .waits .item { padding:12px 0; font-size:1.1em; }
-  .waits .item::before { content:"✨ "; }
-  .photo-block { text-align:center; padding:30px 20px; }
-  .photo-block img { max-width:100%; width:480px; border-radius:20px; box-shadow:0 6px 25px rgba(139,74,60,.25); }
-  .photo-block p { margin-top:15px; font-style:italic; color:#6b4a3c; }
-  .team-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:16px; margin-top:25px; }
-  .member { background:#fff; border-radius:14px; box-shadow:0 2px 10px rgba(0,0,0,.05); text-align:center; overflow:hidden; }
-  .member img { width:100%; height:367px; object-fit:cover; object-position:top; }
-  .member .info { padding:20px 15px; }
-  .member b { color:#8b4a3c; }
-  .member span { display:block; font-size:.9em; color:#6b4a3c; margin-top:6px; }
-  .program { background:#fff; border-radius:14px; padding:25px; box-shadow:0 2px 10px rgba(0,0,0,.05); }
-  .program .row { display:flex; gap:15px; padding:10px 0; border-bottom:1px dashed #e8d5c5; }
-  .program .row:last-child { border:none; }
-  .program .time { min-width:110px; color:#c4704a; font-weight:bold; }
-  .terms { background:#f7e1d7; text-align:center; padding:50px 20px; }
-  .terms p { font-size:1.1em; margin:8px 0; }
-  .contacts { text-align:center; }
-  .contacts a { color:#c4704a; text-decoration:none; }
-  .reg { text-align:center; padding:60px 20px; }
-  footer { background:#3d2c2c; color:#f7e1d7; text-align:center; padding:28px 20px; font-size:.95em; }
-  footer a { color:#f7e1d7; margin:0 10px; text-decoration:none; }
-  @media(max-width:600px){ .hero h1{font-size:1.7em;} .program .row{flex-direction:column;gap:4px;} }
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ты пришла в этот мир не случайно — 19 сентября, Гродно</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Georgia, serif;
+      color: #3d2c2c;
+      background: #faf3eb;
+      line-height: 1.6;
+    }
+
+    .hero {
+      background: linear-gradient(135deg, #f7e1d7, #fdf0e0);
+      padding: 70px 20px;
+      text-align: center;
+    }
+
+    .hero h1 {
+      font-size: 2.3em;
+      color: #8b4a3c;
+      margin-bottom: 15px;
+      font-weight: normal;
+      letter-spacing: 1px;
+    }
+
+    .hero .sub {
+      font-size: 1.15em;
+      color: #6b4a3c;
+      margin-bottom: 25px;
+    }
+
+    .hero .date {
+      display: inline-block;
+      background: #fff;
+      padding: 10px 22px;
+      border-radius: 30px;
+      margin-bottom: 25px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, .05);
+    }
+
+    .btn {
+      display: inline-block;
+      background: #c4704a;
+      color: #fff;
+      padding: 15px 40px;
+      border-radius: 30px;
+      text-decoration: none;
+      font-size: 1.1em;
+      transition: .3s;
+      margin: 5px;
+      border: none;
+      cursor: pointer;
+    }
+
+    .btn:hover {
+      background: #a85a38;
+      transform: translateY(-2px);
+    }
+
+    .btn-ghost {
+      display: inline-block;
+      background: transparent;
+      color: #8b4a3c;
+      border: 2px solid #c4704a;
+      padding: 13px 38px;
+      border-radius: 30px;
+      text-decoration: none;
+      font-size: 1.1em;
+      transition: .3s;
+      margin: 5px;
+    }
+
+    .btn-ghost:hover {
+      background: #c4704a;
+      color: #fff;
+    }
+
+    section {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 55px 20px;
+    }
+
+    h2 {
+      color: #8b4a3c;
+      font-size: 1.7em;
+      margin-bottom: 28px;
+      text-align: center;
+      font-weight: normal;
+    }
+
+    .for-whom ul {
+      list-style: none;
+    }
+
+    .for-whom li {
+      background: #fff;
+      padding: 18px;
+      margin-bottom: 12px;
+      border-radius: 12px;
+      border-left: 4px solid #c4704a;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, .04);
+    }
+
+    .waits {
+      background: #fff7ef;
+    }
+
+    .waits .item {
+      padding: 12px 0;
+      font-size: 1.1em;
+    }
+
+    .waits .item::before {
+      content: "✨ ";
+    }
+
+    .photo-block {
+      text-align: center;
+      padding: 30px 20px;
+    }
+
+    .photo-block img {
+      max-width: 100%;
+      width: 480px;
+      border-radius: 20px;
+      box-shadow: 0 6px 25px rgba(139, 74, 60, .25);
+    }
+
+    .photo-block p {
+      margin-top: 15px;
+      font-style: italic;
+      color: #6b4a3c;
+    }
+
+    .team-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 16px;
+      margin-top: 25px;
+    }
+
+    .member {
+      background: #fff;
+      border-radius: 14px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, .05);
+      text-align: center;
+      overflow: hidden;
+    }
+
+    .member img {
+      width: 100%;
+      height: 367px;
+      object-fit: cover;
+      object-position: top;
+    }
+
+    .member .info {
+      padding: 20px 15px;
+    }
+
+    .member b {
+      color: #8b4a3c;
+    }
+
+    .member span {
+      display: block;
+      font-size: .9em;
+      color: #6b4a3c;
+      margin-top: 6px;
+    }
+
+    .program {
+      background: #fff;
+      border-radius: 14px;
+      padding: 25px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, .05);
+    }
+
+    .program .row {
+      display: flex;
+      gap: 15px;
+      padding: 10px 0;
+      border-bottom: 1px dashed #e8d5c5;
+    }
+
+    .program .row:last-child {
+      border: none;
+    }
+
+    .program .time {
+      min-width: 110px;
+      color: #c4704a;
+      font-weight: bold;
+    }
+
+    .terms {
+      background: #f7e1d7;
+      text-align: center;
+      padding: 50px 20px;
+    }
+
+    .terms p {
+      font-size: 1.1em;
+      margin: 8px 0;
+    }
+
+    .contacts {
+      text-align: center;
+    }
+
+    .contacts a {
+      color: #c4704a;
+      text-decoration: none;
+    }
+
+    .reg {
+      text-align: center;
+      padding: 60px 20px;
+    }
+
+    .reg form {
+      max-width: 500px;
+      margin: 0 auto;
+      text-align: left;
+      background: #fff;
+      padding: 30px;
+      border-radius: 14px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, .05);
+    }
+
+    .reg label {
+      display: block;
+      margin-bottom: 6px;
+      color: #6b4a3c;
+    }
+
+    .reg input {
+      width: 100%;
+      padding: 12px;
+      border: 1px solid #e8d5c5;
+      border-radius: 10px;
+      font-size: 16px;
+      margin-bottom: 18px;
+      font-family: Georgia, serif;
+    }
+
+    .reg .btn {
+      width: 100%;
+      margin: 0;
+    }
+
+    .reg .alt {
+      margin-top: 20px;
+      font-size: .95em;
+      color: #6b4a3c;
+    }
+
+    .reg .alt a {
+      color: #c4704a;
+    }
+
+    footer {
+      background: #3d2c2c;
+      color: #f7e1d7;
+      text-align: center;
+      padding: 28px 20px;
+      font-size: .95em;
+    }
+
+    footer a {
+      color: #f7e1d7;
+      margin: 0 10px;
+      text-decoration: none;
+    }
+
+    @media(max-width:600px) {
+      .hero h1 {
+        font-size: 1.7em;
+      }
+
+      .program .row {
+        flex-direction: column;
+        gap: 4px;
+      }
+    }
+  </style>
 </head>
+
 <body>
 
-<section class="hero">
-  <h1>ТЫ ПРИШЛА В ЭТОТ МИР НЕ СЛУЧАЙНО</h1>
-  <div class="sub">Женская конференция</div>
-  <div class="date">📅 19 сентября 2026 · 📍 Гродно, ул. Гарбарская, 4</div>
-  <br>
-  <a href="https://forms.yandex.ru/u/6a82d41084227cc94a2bae17" class="btn">📝 Занять место</a>
-  <a href="https://t.me/kodiklubov" class="btn-ghost">💬 Задать вопрос в Telegram</a>
-</section>
+  <section class="hero">
+    <h1>ТЫ ПРИШЛА В ЭТОТ МИР НЕ СЛУЧАЙНО</h1>
+    <div class="sub">Женская конференция</div>
+    <div class="date">📅 19 сентября 2026 · 📍 Гродно, ул. Гарбарская, 4</div>
+    <br>
+    <a href="#reg" class="btn">📝 Занять место</a>
+    <a href="https://t.me/kodiklubov" class="btn-ghost">💬 Задать вопрос в Telegram</a>
+  </section>
 
-<section class="photo-block">
-  <img src="photo.jpg" alt="Две женщины складывают сердце из рук">
-  <p>Атмосфера, в которой тебя примут и поддержат</p>
-</section>
+  <section class="photo-block">
+    <img src="photo.jpg" alt="Две женщины складывают сердце из рук">
+    <p>Атмосфера, в которой тебя примут и поддержат</p>
+  </section>
 
-<section class="for-whom">
-  <h2>Кому это нужно</h2>
-  <ul>
-    <li>Живёшь на автомате и теряешь себя в рутине</li>
-    <li>Есть внутренние вопросы, а ответов нет</li>
-    <li>Хочется, чтобы тебя приняли и поддержали</li>
-    <li>Чувствуешь: ты — больше, чем «работа-дом»</li>
-  </ul>
-</section>
+  <section class="for-whom">
+    <h2>Кому это нужно</h2>
+    <ul>
+      <li>Живёшь на автомате и теряешь себя в рутине</li>
+      <li>Есть внутренние вопросы, а ответов нет</li>
+      <li>Хочется, чтобы тебя приняли и поддержали</li>
+      <li>Чувствуешь: ты — больше, чем «работа-дом»</li>
+    </ul>
+  </section>
 
-<section class="waits">
-  <h2>Что тебя ждёт</h2>
-  <div class="item">Понимание твоего истинного потенциала</div>
-  <div class="item">Ответы на внутренние вопросы</div>
-  <div class="item">Атмосфера поддержки и вдохновения</div>
-  <div class="item">Новые близкие по духу люди</div>
-</section>
+  <section class="waits">
+    <h2>Что тебя ждёт</h2>
+    <div class="item">Понимание твоего истинного потенциала</div>
+    <div class="item">Ответы на внутренние вопросы</div>
+    <div class="item">Атмосфера поддержки и вдохновения</div>
+    <div class="item">Новые близкие по духу люди</div>
+  </section>
 
-<section>
-  <h2>Наша команда</h2>
-  <div class="photo-block">
-    <img src="team.jpg" alt="Команда на выпускном вечере христианских консультантов">
-    <p>Выпускной вечер христианских консультантов — наша команда получает дипломы</p>
-  </div>
-  <div class="team-grid">
-    <div class="member"><img src="lyuba.jpg" alt="Любовь Кодик"><div class="info"><b>Любовь Кодик</b><span>Организатор · христианский консультант, женский клуб в Лиде</span></div></div>
-    <div class="member"><img src="alena.jpg" alt="Алёна Кривец"><div class="info"><b>Алёна Кривец</b><span>Организатор · Минск</span></div></div>
-    <div class="member"><img src="snezhana.jpg" alt="Снежана"><div class="info"><b>Снежана</b><span>Организатор · Гродно</span></div></div>
-    <div class="member"><div class="info"><b>Наталья Кихилевич</b><span>Спикер · магистр психологических наук, бакалавр христианского служения</span></div></div>
-    <div class="member"><div class="info"><b>Наталья Шейбак</b><span>Спикер · семейный психолог, магистр христианского консультирования</span></div></div>
-    <div class="member"><img src="tatyana.jpg" alt="Татьяна"><div class="info"><b>Татьяна</b><span>Отвечает за прославления</span></div></div>
-    <div class="member"><img src="admin.jpg" alt="Ольга"><div class="info"><b>Ольга</b><span>Ведущая-администратор</span></div></div>
-  </div>
-  <p style="text-align:center; margin-top:25px; font-style:italic; font-size:1.1em;">Мы из трёх городов — Минск, Лида, Гродно — но нас объединяет одна миссия 🫶</p>
-</section>
+  <section>
+    <h2>Наша команда</h2>
+    <div class="photo-block">
+      <img src="team.jpg" alt="Команда на выпускном вечере христианских консультантов">
+      <p>Выпускной вечер христианских консультантов — наша команда получает дипломы</p>
+    </div>
+    <div class="team-grid">
+      <div class="member"><img src="lyuba.jpg" alt="Любовь Кодик">
+        <div class="info"><b>Любовь Кодик</b><span>Организатор · христианский консультант, женский клуб в Лиде</span>
+        </div>
+      </div>
+      <div class="member"><img src="alena.jpg" alt="Алёна Кривец">
+        <div class="info"><b>Алёна Кривец</b><span>Организатор · Минск</span></div>
+      </div>
+      <div class="member"><img src="snezhana.jpg" alt="Снежана">
+        <div class="info"><b>Снежана</b><span>Организатор · Гродно</span></div>
+      </div>
+      <div class="member"><img src="sheybak.jpg" alt="Наталья Шейбак">
+        <div class="info"><b>Наталья Шейбак</b><span>Спикер · семейный психолог, магистр христианского
+            консультирования</span></div>
+      </div>
+      <div class="member">
+        <div class="info"><b>Наталья Кихилевич</b><span>Спикер · магистр психологических наук, бакалавр христианского
+            служения</span></div>
+      </div>
+      <div class="member"><img src="tatyana.jpg" alt="Татьяна">
+        <div class="info"><b>Татьяна</b><span>Отвечает за прославления</span></div>
+      </div>
+      <div class="member"><img src="admin.jpg" alt="Ольга">
+        <div class="info"><b>Ольга</b><span>Ведущая-администратор</span></div>
+      </div>
+    </div>
+    <p style="text-align:center; margin-top:25px; font-style:italic; font-size:1.1em;">Мы из трёх городов — Минск, Лида,
+      Гродно — но нас объединяет одна миссия 🫶</p>
+  </section>
 
-<section class="photo-block">
-  <img src="cafe.jpg" alt="Встреча с молодыми девушками за кофе">
-  <p>Встреча с молодыми девушками — такие моменты и есть наша миссия</p>
-</section>
+  <section class="photo-block">
+    <img src="cafe.jpg" alt="Встреча с молодыми девушками за кофе">
+    <p>Встреча с молодыми девушками — такие моменты и есть наша миссия</p>
+  </section>
 
-<section>
-  <h2>Программа</h2>
-  <div class="program">
-    <div class="row"><div class="time">09:30–10:15</div><div>Регистрация участников и приветственный кофе ☕</div></div>
-    <div class="row"><div class="time">10:15–11:30</div><div>Открытие конференции</div></div>
-    <div class="row"><div class="time">11:30–13:00</div><div>Первая сессия</div></div>
-    <div class="row"><div class="time">13:00–14:00</div><div>Обед 🍽</div></div>
-    <div class="row"><div class="time">14:00–16:00</div><div>Вторая сессия</div></div>
-    <div class="row"><div class="time">16:00–16:30</div><div>Кофе-пауза</div></div>
-    <div class="row"><div class="time">16:30–18:00</div><div>Третья сессия</div></div>
-    <div class="row"><div class="time">18:00–18:30</div><div>Подведение итогов, закрытие конференции</div></div>
-  </div>
-</section>
+  <section>
+    <h2>Программа</h2>
+    <div class="program">
+      <div class="row">
+        <div class="time">09:30–10:15</div>
+        <div>Регистрация участников и приветственный кофе ☕</div>
+      </div>
+      <div class="row">
+        <div class="time">10:15–11:30</div>
+        <div>Открытие конференции</div>
+      </div>
+      <div class="row">
+        <div class="time">11:30–13:00</div>
+        <div>Первая сессия</div>
+      </div>
+      <div class="row">
+        <div class="time">13:00–14:00</div>
+        <div>Обед 🍽</div>
+      </div>
+      <div class="row">
+        <div class="time">14:00–16:00</div>
+        <div>Вторая сессия</div>
+      </div>
+      <div class="row">
+        <div class="time">16:00–16:30</div>
+        <div>Кофе-пауза</div>
+      </div>
+      <div class="row">
+        <div class="time">16:30–18:00</div>
+        <div>Третья сессия</div>
+      </div>
+      <div class="row">
+        <div class="time">18:00–18:30</div>
+        <div>Подведение итогов, закрытие конференции</div>
+      </div>
+    </div>
+  </section>
 
-<section class="terms">
-  <h2>Условия участия</h2>
-  <p>💛 Добровольное пожертвование — <b>30 BYN</b> (входит комплексный обед)</p>
-  <p>📝 Обязательная регистрация <b>до 14 сентября</b></p>
-  <p>📍 Гродно, ул. Гарбарская, 4 — 3 этаж, к. 317</p>
-</section>
+  <section class="terms">
+    <h2>Условия участия</h2>
+    <p>💛 Добровольное пожертвование — <b>30 BYN</b> (входит комплексный обед)</p>
+    <p>📝 Обязательная регистрация <b>до 14 сентября</b></p>
+    <p>📍 Гродно, ул. Гарбарская, 4 — 3 этаж, к. 317</p>
+  </section>
 
-<section class="contacts">
-  <h2>Вопросы? Звони:</h2>
-  <p>Гродно: <a href="tel:+375297071489">+375 29 707-14-89</a> — Снежана<br>
-  Лида: <a href="tel:+375292876222">+375 29 287-62-22</a> — Любовь<br>
-  Минск: <a href="tel:+375291931912">+375 29 193-19-12</a> — Алёна</p>
-</section>
+  <section class="contacts">
+    <h2>Вопросы? Звони:</h2>
+    <p>Гродно: <a href="tel:+375297071489">+375 29 707-14-89</a> — Снежана<br>
+      Лида: <a href="tel:+375292876222">+375 29 287-62-22</a> — Любовь<br>
+      Минск: <a href="tel:+375291931912">+375 29 193-19-12</a> — Алёна</p>
+  </section>
 
-<section class="reg">
-  <h2>Регистрация</h2>
-  <p style="margin-bottom:25px; font-size:1.1em;">Мест ограничено. Регистрация до 14 сентября.</p>
-  <a href="https://forms.yandex.ru/u/6a82d41084227cc94a2bae17" class="btn">📝 Занять место</a>
-  <a href="https://t.me/kodiklubov" class="btn-ghost">💬 Задать вопрос в Telegram</a>
-</section>
+  <section class="photo-block">
+    <img src="poster.jpg" alt="Афиша конференции — Ты пришла в этот мир не случайно, 19 сентября, Гродно">
+    <p>Официальная афиша конференции</p>
+  </section>
 
-<footer>
-  <p style="margin-bottom:12px;"><b>Мы в соцсетях:</b></p>
-  <p>
-    <a href="https://www.instagram.com/wumenlida2024">📷 Instagram — фото и жизнь клуба</a><br><br>
-    <a href="https://t.me/kodiklubov">💬 Telegram — вопросы и связь с нами</a>
-  </p>
-</footer>
+  <section class="reg" id="reg">
+    <h2>Регистрация</h2>
+    <p style="margin-bottom:25px; font-size:1.1em;">Мест ограничено. Регистрация до 14 сентября.</p>
+    <form id="conf-form">
+      <label for="conf-name">Ваше имя</label>
+      <input type="text" id="conf-name" required placeholder="Как к вам обращаться?">
+      <label for="conf-phone">Телефон</label>
+      <input type="tel" id="conf-phone" required placeholder="+375">
+      <label for="conf-city">Город</label>
+      <input type="text" id="conf-city" required placeholder="Откуда вы?">
+      <button type="submit" class="btn">📝 Отправить заявку</button>
+    </form>
+    <p class="alt">Или заполните <a href="https://forms.yandex.ru/u/6a82d41084227cc94a2bae17">форму регистрации</a> · <a
+        href="https://t.me/kodiklubov">задайте вопрос в Telegram</a></p>
+  </section>
+
+  <footer>
+    <p style="margin-bottom:12px;"><b>Мы в соцсетях:</b></p>
+    <p>
+      <a href="https://www.instagram.com/wumenlida2024">📷 Instagram — фото и жизнь клуба</a><br><br>
+      <a href="https://t.me/kodiklubov">💬 Telegram — вопросы и связь с нами</a>
+    </p>
+  </footer>
+
+  <script>
+    document.getElementById('conf-form').addEventListener('submit', function (e) {
+      e.preventDefault();
+      var name = document.getElementById('conf-name').value;
+      var phone = document.getElementById('conf-phone').value;
+      var city = document.getElementById('conf-city').value;
+
+      var text = '📩 Заявка на конференцию\n👤 Имя: ' + name + '\n📱 Телефон: ' + phone + '\n🏙 Город: ' + city;
+
+      function openChat() {
+        window.open('https://t.me/kodiklubov', '_blank');
+        alert('Заявка скопирована! В Telegram вставь её в поле сообщения (удерживай палец → «Вставить») и нажми отправить.');
+      }
+
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(text).then(openChat).catch(openChat);
+      } else {
+        openChat();
+      }
+      this.reset();
+    });
+  </script>
 
 </body>
+
 </html>
