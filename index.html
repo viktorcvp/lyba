@@ -1,112 +1,610 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Политика конфиденциальности — Женская конференция</title>
+  <title>Ты пришла в этот мир не случайно — женская христианская конференция, Гродно, 19 сентября</title>
+  <meta name="description"
+    content="Женская христианская конференция в Гродно — 19 сентября 2026, 10:00–18:00. Эмоциональное исцеление, поддержка и твоё призвание. Регистрация до 14 сентября.">
+  <meta name="keywords" content="женская конференция, Гродно, христианская конференция, женский клуб">
+  <link rel="canonical" href="https://viktorcvp.github.io/lyba/">
+  <meta property="og:title" content="Ты пришла в этот мир не случайно — женская конференция, Гродно">
+  <meta property="og:description"
+    content="19 сентября 2026, Гродно. Эмоциональное исцеление, поддержка и твоё призвание. Регистрация до 14 сентября.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://viktorcvp.github.io/lyba/">
+  <meta property="og:image" content="https://viktorcvp.github.io/lyba/poster.jpg">
   <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
     body {
       font-family: Georgia, serif;
       color: #3d2c2c;
       background: #faf3eb;
       line-height: 1.6;
+    }
+
+    .hero {
+      background: linear-gradient(135deg, #f7e1d7, #fdf0e0);
+      padding: 70px 20px;
+      text-align: center;
+    }
+
+    .hero h1 {
+      font-size: 2.3em;
+      color: #8b4a3c;
+      margin-bottom: 15px;
+      font-weight: normal;
+      letter-spacing: 1px;
+    }
+
+    .hero .sub {
+      font-size: 1.15em;
+      color: #6b4a3c;
+      margin-bottom: 20px;
+    }
+
+    .hero .verse {
+      max-width: 560px;
+      margin: 0 auto 25px;
+      font-style: italic;
+      color: #6b4a3c;
+    }
+
+    .hero .date {
+      display: inline-block;
+      background: #fff;
+      padding: 10px 22px;
+      border-radius: 30px;
+      margin-bottom: 25px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, .05);
+    }
+
+    .btn {
+      display: inline-block;
+      background: #c4704a;
+      color: #fff;
+      padding: 15px 40px;
+      border-radius: 30px;
+      text-decoration: none;
+      font-size: 1.1em;
+      transition: .3s;
+      margin: 5px;
+      border: none;
+      cursor: pointer;
+    }
+
+    .btn:hover {
+      background: #a85a38;
+      transform: translateY(-2px);
+    }
+
+    .btn-ghost {
+      display: inline-block;
+      background: transparent;
+      color: #8b4a3c;
+      border: 2px solid #c4704a;
+      padding: 13px 38px;
+      border-radius: 30px;
+      text-decoration: none;
+      font-size: 1.1em;
+      transition: .3s;
+      margin: 5px;
+    }
+
+    .btn-ghost:hover {
+      background: #c4704a;
+      color: #fff;
+    }
+
+    section {
       max-width: 800px;
       margin: 0 auto;
-      padding: 40px 20px;
+      padding: 55px 20px;
     }
-    
-    h1 {
-      color: #8b4a3c;
-      text-align: center;
-      margin-bottom: 30px;
-    }
-    
+
     h2 {
       color: #8b4a3c;
-      margin-top: 30px;
-      margin-bottom: 15px;
+      font-size: 1.7em;
+      margin-bottom: 28px;
+      text-align: center;
+      font-weight: normal;
     }
-    
-    p, ul {
-      margin-bottom: 15px;
+
+    .for-whom ul {
+      list-style: none;
     }
-    
-    ul {
-      padding-left: 20px;
+
+    .for-whom li {
+      background: #fff;
+      padding: 18px;
+      margin-bottom: 12px;
+      border-radius: 12px;
+      border-left: 4px solid #c4704a;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, .04);
     }
-    
-    .back-link {
-      display: inline-block;
-      margin-top: 30px;
+
+    .waits {
+      background: #fff7ef;
+    }
+
+    .waits .item {
+      padding: 12px 0;
+      font-size: 1.05em;
+    }
+
+    .team-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 16px;
+      margin-top: 25px;
+    }
+
+    .member {
+      background: #fff;
+      border-radius: 14px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, .05);
+      text-align: center;
+      overflow: hidden;
+    }
+
+    .member img {
+      width: 100%;
+      height: 367px;
+      object-fit: cover;
+      object-position: top;
+    }
+
+    .member .info {
+      padding: 20px 15px;
+    }
+
+    .member b {
+      color: #8b4a3c;
+    }
+
+    .member span {
+      display: block;
+      font-size: .9em;
+      color: #6b4a3c;
+      margin-top: 6px;
+    }
+
+    .program {
+      background: #fff;
+      border-radius: 14px;
+      padding: 25px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, .05);
+    }
+
+    .program .row {
+      display: flex;
+      gap: 15px;
+      padding: 10px 0;
+      border-bottom: 1px dashed #e8d5c5;
+    }
+
+    .program .row:last-child {
+      border: none;
+    }
+
+    .program .time {
+      min-width: 110px;
+      color: #c4704a;
+      font-weight: bold;
+    }
+
+    .terms {
+      background: #f7e1d7;
+      text-align: center;
+      padding: 50px 20px;
+    }
+
+    .terms p {
+      font-size: 1.1em;
+      margin: 8px 0;
+    }
+
+    .contacts {
+      text-align: center;
+    }
+
+    .contacts a {
       color: #c4704a;
       text-decoration: none;
     }
-    
-    .back-link:hover {
+
+    .reg {
+      text-align: center;
+      padding: 60px 20px;
+    }
+
+    .reg form {
+      max-width: 500px;
+      margin: 0 auto;
+      text-align: left;
+      background: #fff;
+      padding: 30px;
+      border-radius: 14px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, .05);
+    }
+
+    .reg label {
+      display: block;
+      margin-bottom: 6px;
+      color: #6b4a3c;
+    }
+
+    .reg input {
+      width: 100%;
+      padding: 12px;
+      border: 1px solid #e8d5c5;
+      border-radius: 10px;
+      font-size: 16px;
+      margin-bottom: 18px;
+      font-family: Georgia, serif;
+    }
+
+    .reg .btn {
+      width: 100%;
+      margin: 0;
+    }
+
+    .reg .alt {
+      margin-top: 20px;
+      font-size: .95em;
+      color: #6b4a3c;
+    }
+
+    .reg .alt a {
+      color: #c4704a;
+    }
+
+    .hint {
+      font-size: .9em;
+      color: #6b4a3c;
+      margin-bottom: 15px;
+    }
+
+    /* Стили для чекбоксов */
+    .checkbox-group {
+      margin: 15px 0;
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+    }
+
+    .checkbox-group input[type="checkbox"] {
+      margin-top: 4px;
+      flex-shrink: 0;
+      width: 18px;
+      height: 18px;
+      cursor: pointer;
+    }
+
+    .checkbox-group label {
+      font-size: 0.9em;
+      line-height: 1.4;
+      cursor: pointer;
+      margin: 0;
+    }
+
+    .checkbox-group a {
+      color: #c4704a;
       text-decoration: underline;
+    }
+
+    .checkbox-group a:hover {
+      text-decoration: none;
+    }
+
+    #conf-result {
+      display: none;
+      margin-top: 20px;
+      background: #fff7ef;
+      border: 1px dashed #c4704a;
+      border-radius: 12px;
+      padding: 20px;
+      text-align: left;
+    }
+
+    #conf-result pre {
+      white-space: pre-wrap;
+      font-family: Georgia, serif;
+      font-size: 1em;
+      margin-bottom: 15px;
+    }
+
+    #conf-copy {
+      width: auto;
+      padding: 10px 25px;
+      font-size: 1em;
+    }
+
+    .photo-block {
+      text-align: center;
+      padding: 30px 20px;
+    }
+
+    .photo-block img {
+      max-width: 100%;
+      width: 480px;
+      border-radius: 20px;
+      box-shadow: 0 6px 25px rgba(139, 74, 60, .25);
+    }
+
+    .photo-block p {
+      margin-top: 15px;
+      font-style: italic;
+      color: #6b4a3c;
+    }
+
+    footer {
+      background: #3d2c2c;
+      color: #f7e1d7;
+      text-align: center;
+      padding: 28px 20px;
+      font-size: .95em;
+    }
+
+    footer a {
+      color: #f7e1d7;
+      margin: 0 10px;
+      text-decoration: none;
+    }
+
+    footer .org {
+      margin-top: 14px;
+      font-size: .8em;
+      opacity: .75;
+    }
+
+    @media(max-width:600px) {
+      .hero h1 {
+        font-size: 1.7em;
+      }
+
+      .program .row {
+        flex-direction: column;
+        gap: 4px;
+      }
+
+      .checkbox-group {
+        flex-direction: column;
+        gap: 5px;
+      }
     }
   </style>
 </head>
+
 <body>
-  <h1>Политика конфиденциальности</h1>
-  
-  <h2>1. Общие положения</h2>
-  <p>Настоящая политика обработки персональных данных составлена в соответствии с требованиями законодательства Республики Беларусь о защите персональных данных. Политика определяет порядок обработки и защиты персональных данных участников женской христианской конференции «Ты пришла в этот мир не случайно».</p>
-  
-  <h2>2. Какие данные мы собираем</h2>
-  <p>При регистрации на конференцию мы собираем следующие персональные данные:</p>
-  <ul>
-    <li>Имя и фамилия участника</li>
-    <li>Номер телефона</li>
-    <li>Город проживания</li>
-  </ul>
-  
-  <h2>3. Цели обработки данных</h2>
-  <p>Собранные данные используются исключительно для:</p>
-  <ul>
-    <li>Регистрации участника на конференцию</li>
-    <li>Отправки информации о месте проведения и программе мероприятия</li>
-    <li>Организационной связи с участником до и во время конференции</li>
-    <li>Отправки информационных рассылок (только при наличии отдельного согласия)</li>
-  </ul>
-  
-  <h2>4. Правовые основания обработки</h2>
-  <p>Обработка персональных данных осуществляется на основании:</p>
-  <ul>
-    <li>Согласия субъекта персональных данных, данного при заполнении регистрационной формы</li>
-    <li>Необходимости исполнения договора об участии в конференции</li>
-  </ul>
-  
-  <h2>5. Срок хранения данных</h2>
-  <p>Персональные данные хранятся до окончания конференции и в течение 30 дней после её завершения для решения возможных организационных вопросов. После этого данные удаляются, если участник не дал отдельного согласия на хранение для будущих мероприятий.</p>
-  
-  <h2>6. Ваши права</h2>
-  <p>Вы имеете право:</p>
-  <ul>
-    <li>Запросить информацию о том, какие ваши данные обрабатываются</li>
-    <li>Требовать исправления неточной или неполной информации</li>
-    <li>Отозвать согласие на обработку персональных данных</li>
-    <li>Требовать удаления ваших данных</li>
-    <li>Подать жалобу в уполномоченный орган по защите прав субъектов персональных данных</li>
-  </ul>
-  
-  <h2>7. Меры безопасности</h2>
-  <p>Организаторы принимают все необходимые технические и организационные меры для защиты персональных данных от несанкционированного доступа, изменения, уничтожения или распространения.</p>
-  
-  <h2>8. Контакты</h2>
-  <p>По всем вопросам, связанным с обработкой персональных данных, вы можете обратиться к организаторам:</p>
-  <ul>
-    <li>Гродно: +375 29 707-14-89 — Снежана</li>
-    <li>Лида: +375 29 287-62-22 — Любовь</li>
-    <li>Минск: +375 29 193-19-12 — Алёна</li>
-    <li>Email: kodiklubov@gmail.com</li>
-  </ul>
-  
-  <h2>9. Изменения в политике</h2>
-  <p>Организаторы оставляют за собой право вносить изменения в настоящую политику. Актуальная версия всегда доступна на сайте конференции.</p>
-  
-  <p><i>Дата вступления в силу: 1 сентября 2026 года</i></p>
-  
-  <a href="index.html" class="back-link">← Вернуться на главную страницу</a>
+
+  <section class="hero">
+    <h1>ТЫ ПРИШЛА В ЭТОТ МИР НЕ СЛУЧАЙНО</h1>
+    <div class="sub">✨ Женская христианская конференция в Гродно ✨</div>
+    <div class="verse">«Славлю Тебя, потому что я дивно устроен. Дивны дела Твои, и душа моя вполне осознаёт
+      это».<br>Псалом 138:14</div>
+    <div class="date">📅 19 сентября 2026 (суббота) · ⏰ 10:00–18:00 ·  Гродно</div>
+    <br>
+    <a href="#reg" class="btn">📝 Занять место</a>
+    <a href="https://t.me/kodiklubov" class="btn-ghost">💬 Задать вопрос в Telegram</a>
+  </section>
+
+  <section class="for-whom">
+    <h2>Знакомо ли тебе это?</h2>
+    <ul>
+      <li>Устала постоянно быть сильной и нести всё на своих плечах</li>
+      <li>За бесконечной суетой и заботами о семье и работе постепенно потеряла саму себя</li>
+      <li>Внутреннее одиночество, когда кажется, что никто по-настоящему не понимает твою боль</li>
+      <li>Устала сравнивать себя с другими и соответствовать чужим ожиданиям</li>
+      <li>Веришь, что «недостаточно хороша», и спрашиваешь: «Боже, в чём же моё истинное призвание?»</li>
+    </ul>
+    <p style="text-align:center; margin-top:25px; font-size:1.15em;">Творец создал тебя с глубокой любовью и особым
+      замыслом! </p>
+  </section>
+
+  <section class="waits">
+    <h2>Что тебя ждёт на конференции</h2>
+    <div class="item">💝 Ты сбросишь груз накопленной боли, обид и чужих ожиданий</div>
+    <div class="item">💝 Твоё сердце получит эмоциональное исцеление, а ты обретёшь свободу от ложных представлений о
+      себе</div>
+    <div class="item">💝 Получишь послание от Творца, которое изменит твоё самовосприятие</div>
+    <div class="item">🌱 Исследуешь свои уникальные дары и таланты, заложенные Богом</div>
+    <div class="item"> Перестанешь жить из состояния дефицита и усталости</div>
+    <div class="item">🌿 Обретёшь понимание своего предназначения и способность давать жизнь, тепло и вдохновение всему,
+      к чему прикасаешься</div>
+    <div class="item">🕯 Переживёшь опыт поддерживающего женского окружения, ощутишь радость даяния и научишься легко
+      принимать искреннюю любовь, принятие и молитвенную поддержку</div>
+  </section>
+
+  <section>
+    <h2>Организаторы и спикеры</h2>
+    <div class="team-grid">
+      <div class="member"><img src="lyuba.jpg" alt="Любовь Кодик">
+        <div class="info"><b>Любовь Кодик</b><span>Организатор · христианский консультант, женский клуб в Лиде</span>
+        </div>
+      </div>
+      <div class="member"><img src="alena.jpg" alt="Алёна Кривец">
+        <div class="info"><b>Алёна Кривец</b><span>Организатор · Минск</span></div>
+      </div>
+      <div class="member"><img src="snezhana.jpg" alt="Снежана">
+        <div class="info"><b>Снежана</b><span>Организатор · Гродно</span></div>
+      </div>
+      <div class="member"><img src="sheybak.jpg" alt="Наталья Шейбак">
+        <div class="info"><b>Наталья Шейбак</b><span>Спикер · семейный психолог, магистр христианского
+            консультирования</span></div>
+      </div>
+      <div class="member"><img src="kihilevich.jpg" alt="Наталья Кихилевич">
+        <div class="info"><b>Наталья Кихилевич</b><span>Спикер · магистр психологических наук, бакалавр христианского
+            служения</span></div>
+      </div>
+      <div class="member"><img src="tatyana.jpg" alt="Татьяна">
+        <div class="info"><b>Татьяна</b><span>Оргкоманда · отвечает за прославление</span></div>
+      </div>
+      <div class="member"><img src="admin.jpg" alt="Ольга">
+        <div class="info"><b>Ольга</b><span>Оргкоманда · ведущая-администратор</span></div>
+      </div>
+    </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Программа</h2>
+    <div class="program">
+      <div class="row">
+        <div class="time">10:00–10:30</div>
+        <div>Регистрация участников и приветственный кофе ☕</div>
+      </div>
+      <div class="row">
+        <div class="time">10:30–11:30</div>
+        <div>Открытие конференции</div>
+      </div>
+      <div class="row">
+        <div class="time">11:30–13:00</div>
+        <div>Первая сессия</div>
+      </div>
+      <div class="row">
+        <div class="time">13:00–14:00</div>
+        <div>Обед 🍽</div>
+      </div>
+      <div class="row">
+        <div class="time">14:00–16:00</div>
+        <div>Вторая сессия</div>
+      </div>
+      <div class="row">
+        <div class="time">16:00–16:30</div>
+        <div>Кофе-пауза</div>
+      </div>
+      <div class="row">
+        <div class="time">16:30–17:30</div>
+        <div>Третья сессия</div>
+      </div>
+      <div class="row">
+        <div class="time">17:30–18:00</div>
+        <div>Подведение итогов, закрытие конференции</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="terms">
+    <h2>Условия участия</h2>
+    <p>💛 Добровольное пожертвование — <b>30 BYN</b> (входит комплексный обед)</p>
+    <p>📝 Обязательная регистрация <b>до 14 сентября</b></p>
+    <p> Гродно (точный адрес высылается при регистрации)</p>
+  </section>
+
+  <section class="contacts">
+    <h2>Вопросы? Звони:</h2>
+    <p>Гродно: <a href="tel:+375297071489">+375 29 707-14-89</a> — Снежана<br>
+      Лида: <a href="tel:+375292876222">+375 29 287-62-22</a> — Любовь<br>
+      Минск: <a href="tel:+375291931912">+375 29 193-19-12</a> — Алёна</p>
+  </section>
+
+  <section class="photo-block">
+    <img src="poster.jpg" alt="Афиша конференции — Ты пришла в этот мир не случайно, 19 сентября, Гродно">
+    <p>Официальная афиша конференции</p>
+  </section>
+
+  <section class="reg" id="reg">
+    <h2>Регистрация</h2>
+    <p style="margin-bottom:25px; font-size:1.1em;">Количество мест ограничено. Регистрация до 14 сентября.</p>
+    <form id="conf-form">
+      <label for="conf-name">Ваше имя</label>
+      <input type="text" id="conf-name" required placeholder="Как к вам обращаться?">
+      
+      <label for="conf-phone">Телефон</label>
+      <input type="tel" id="conf-phone" required placeholder="+375">
+      
+      <label for="conf-city">Город</label>
+      <input type="text" id="conf-city" required placeholder="Откуда вы?">
+      
+      <!-- ОБЯЗАТЕЛЬНЫЕ ГАЛОЧКИ СОГЛАСИЯ -->
+      <div class="checkbox-group">
+        <input type="checkbox" id="privacy-consent" required>
+        <label for="privacy-consent">
+          Я согласен на обработку моих персональных данных в соответствии с 
+          <a href="privacy.html" target="_blank">Политикой конфиденциальности</a>
+        </label>
+      </div>
+      
+      <div class="checkbox-group">
+        <input type="checkbox" id="newsletter-consent">
+        <label for="newsletter-consent">
+          Я согласен получать информационные рассылки о мероприятиях и новостях клуба
+        </label>
+      </div>
+      
+      <p class="hint">После нажатия откроется Telegram с готовой заявкой — просто нажми кнопку отправки (стрелку). Если
+        текст не появился — нажми «Скопировать» ниже и вставь вручную.</p>
+      <button type="submit" class="btn">📝 Отправить заявку</button>
+      <div id="conf-result">
+        <p style="margin-bottom:10px;"><b>Заявка готова — скопируй и вставь в Telegram:</b></p>
+        <pre id="conf-text"></pre>
+        <button type="button" id="conf-copy" class="btn">📋 Скопировать</button>
+      </div>
+    </form>
+    <p class="alt">Или заполните <a href="https://forms.yandex.ru/u/6a82d41084227cc94a2bae17">форму регистрации</a> · <a
+        href="https://t.me/kodiklubov">задайте вопрос в Telegram</a></p>
+  </section>
+
+  <footer>
+    <p style="margin-bottom:12px;"><b>Мы в соцсетях:</b></p>
+    <p>
+      <a href="https://www.instagram.com/wumenlida2024">📷 Instagram — фото и жизнь клуба</a><br><br>
+      <a href="https://t.me/kodiklubov">💬 Telegram — вопросы и связь с нами</a>
+    </p>
+    <p class="org">Конференция проводится при поддержке церкви «Примирение» (Гродно)</p>
+    <p class="org"><a href="privacy.html">Политика конфиденциальности</a></p>
+  </footer>
+
+  <script>
+    var confText = '';
+
+    document.getElementById('conf-form').addEventListener('submit', function (e) {
+      e.preventDefault();
+      
+      // Проверка галочек
+      var privacyConsent = document.getElementById('privacy-consent').checked;
+      var newsletterConsent = document.getElementById('newsletter-consent').checked;
+      
+      if (!privacyConsent) {
+        alert('Пожалуйста, подтвердите согласие на обработку персональных данных.');
+        return;
+      }
+      
+      var name = document.getElementById('conf-name').value;
+      var phone = document.getElementById('conf-phone').value;
+      var city = document.getElementById('conf-city').value;
+
+      confText = '📩 Заявка на конференцию\n👤 Имя: ' + name + '\n📱 Телефон: ' + phone + '\n🏙 Город: ' + city;
+      
+      if (newsletterConsent) {
+        confText += '\n✅ Согласен на рассылку';
+      }
+
+      document.getElementById('conf-text').textContent = confText;
+      document.getElementById('conf-result').style.display = 'block';
+
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(confText);
+      }
+      window.open('https://t.me/kodiklubov?text=' + encodeURIComponent(confText), '_blank');
+      document.getElementById('conf-result').scrollIntoView({ behavior: 'smooth', block: 'center' });
+    });
+
+    document.getElementById('conf-copy').addEventListener('click', function () {
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(confText);
+      }
+      this.textContent = '✓ Скопировано!';
+    });
+  </script>
+
 </body>
+
 </html>
